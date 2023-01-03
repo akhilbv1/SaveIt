@@ -14,5 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "SaveIt"
 include ':app'
-include ':framework'
-include ':data'
+include ':dataLib'
+include ':frameworklib'

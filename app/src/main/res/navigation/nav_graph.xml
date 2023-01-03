@@ -6,6 +6,6 @@
 
     <fragment
         android:id="@+id/addInformationFragment"
-        android:name="com.akiapps.saveit.AddInformationFragment"
+        android:name="com.akiapps.saveit.home.addinfo.AddInformationFragment"
         android:label="AddInformationFragment" />
 </navigation>

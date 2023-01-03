@@ -1,24 +1,20 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
-    id 'androidx.navigation.safeargs.kotlin'
     id 'kotlin-kapt'
     id 'com.google.dagger.hilt.android'
 }
 apply from: '../dependencies.gradle'
-
 android {
-    namespace 'com.akiapps.saveit'
+    namespace 'com.akiapps.frameworklib'
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.akiapps.saveit"
         minSdk 29
         targetSdk 32
-        versionCode 1
-        versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
     }
 
     buildTypes {
@@ -34,37 +30,21 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    buildFeatures {
-        viewBinding true
-    }
 }
 
 dependencies {
-    implementation project(":frameworklib")
-    implementation project.ext.dependencies.constraint_layout
-    implementation project.ext.dependencies.navigation_fragments
-    implementation project.ext.dependencies.navigation_ui
-    implementation project.ext.dependencies.navigation_fragment_ktx
-    implementation project.ext.dependencies.navigation_ui_ktx
-    implementation project.ext.dependencies.navigation_dynamic_features_fragment
-    implementation project.ext.testing.navigation_testing
-    implementation project.ext.dependencies.room_runtime
-    implementation project.ext.dependencies.room_ktx
-    annotationProcessor project.ext.dependencies.room_compiler
-    kapt project.ext.dependencies.room_compiler
-    testImplementation project.ext.testing.room_testing
+
     implementation project.ext.dependencies.androidx_core_ktx
     implementation project.ext.dependencies.app_compat
     implementation project.ext.dependencies.google_material
     testImplementation project.ext.testing.junit
     androidTestImplementation  project.ext.testing.androidx_junit
     androidTestImplementation project.ext.testing.androidx_core_ktx_testing
-
+    implementation project.ext.dependencies.room_runtime
+    implementation project.ext.dependencies.room_ktx
+    annotationProcessor project.ext.dependencies.room_compiler
+    kapt project.ext.dependencies.room_compiler
+    testImplementation project.ext.testing.room_testing
     implementation project.ext.dependencies.hilt_android
     kapt project.ext.dependencies.hilt_compiler
-}
-
-// Allow references to generated code
-kapt {
-    correctErrorTypes true
 }

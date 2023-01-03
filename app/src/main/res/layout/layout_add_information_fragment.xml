@@ -21,8 +21,8 @@
         android:id="@+id/textInput_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:hint="enter title"
+        android:layout_margin="@dimen/margin_15_dp"
+        android:hint="@string/enter_title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar">
@@ -37,27 +37,28 @@
         android:id="@+id/textInput_des"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:hint="enter description"
+        android:layout_margin="@dimen/margin_15_dp"
+        android:hint="@string/enter_description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:passwordToggleEnabled="true"
         app:layout_constraintTop_toBottomOf="@+id/textInput_title">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_des"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:minHeight="150dp" />
+            android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_save_information"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#CFF8D1"
-        android:text="Save"
-        android:textColor="@color/white"
-        android:layout_marginTop="40dp"
+        android:background="@color/background_button_save"
+        android:text="@string/save"
+        android:textColor="@color/black"
+        android:layout_marginTop="@dimen/margin_40"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInput_des" />
