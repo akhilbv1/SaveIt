@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="@dimen/match_constraint"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <include layout="@layout/toolbar_save_it" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <include
+            android:id="@+id/item_card_details"
+            layout="@layout/item_card_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_15_dp"
+            app:layout_constraintBottom_toTopOf="@+id/textInput_card_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInput_card_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_15_dp"
+            android:hint="@string/card_name"
+            app:layout_constraintBottom_toTopOf="@+id/textInput_card_number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_card_details">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_card_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInput_card_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_15_dp"
+            android:hint="@string/card_number"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_year"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textInput_card_name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_card_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/spinner_year"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/spinner_year" />
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_15_dp"
+            app:layout_constraintBottom_toTopOf="@+id/textInput_card_cvv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/spinner_month"
+            app:layout_constraintTop_toBottomOf="@+id/textInput_card_number" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInput_card_cvv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_15_dp"
+            android:hint="@string/cvv"
+            app:layout_constraintBottom_toTopOf="@+id/spinner_card_type"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_year">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_card_cvv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:maxLength="3" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:id="@+id/spinner_card_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_15_dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_save_information"
+            app:layout_constraintEnd_toEndOf="@+id/spinner_year"
+            app:layout_constraintStart_toStartOf="@+id/spinner_month"
+            app:layout_constraintTop_toBottomOf="@+id/textInput_card_cvv" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_save_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_15_dp"
+            android:layout_marginBottom="@dimen/margin_15_dp"
+            android:background="@color/background_button_save"
+            android:padding="10dp"
+            android:text="@string/save_card_details"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinner_card_type" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
