@@ -7,10 +7,15 @@
     <fragment
         android:id="@+id/addInformationFragment"
         android:name="com.akiapps.saveit.home.addinfo.AddInformationFragment"
-        android:label="AddInformationFragment" />
+        android:label="AddInformationFragment">
+        <argument
+            android:name="InfoType"
+            android:defaultValue="1"
+            app:nullable="false" />
+    </fragment>
 
     <fragment
         android:id="@+id/addCardDetailsFragment"
         android:name="com.akiapps.saveit.home.addinfo.AddCardDetailsFragment"
-        android:label="AddCardDetailsFragment"/>
+        android:label="AddCardDetailsFragment" />
 </navigation>
