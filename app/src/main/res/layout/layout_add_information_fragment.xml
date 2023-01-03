@@ -18,7 +18,7 @@
     </com.google.android.material.appbar.MaterialToolbar>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInput_title"
+        android:id="@+id/textInput_card_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_15_dp"
@@ -34,7 +34,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInput_des"
+        android:id="@+id/textInput_card_expiry"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_15_dp"
@@ -42,7 +42,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:passwordToggleEnabled="true"
-        app:layout_constraintTop_toBottomOf="@+id/textInput_title">
+        app:layout_constraintTop_toBottomOf="@+id/textInput_card_number">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/edit_des"
@@ -61,6 +61,6 @@
         android:layout_marginTop="@dimen/margin_40"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInput_des" />
+        app:layout_constraintTop_toBottomOf="@+id/textInput_card_expiry" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
