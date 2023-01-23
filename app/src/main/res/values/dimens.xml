@@ -8,4 +8,9 @@
     <dimen name="margin_10dp">10dp</dimen>
     <dimen name="text_size_15">15sp</dimen>
     <dimen name="text_size_13">13sp</dimen>
+    <dimen name="elevation_5">5dp</dimen>
+    <dimen name="height_6dp">6dp</dimen>
+    <dimen name="height_16dp">16dp</dimen>
+    <dimen name="width_16dp">16dp</dimen>
+    <dimen name="margin_3">3dp</dimen>
 </resources>

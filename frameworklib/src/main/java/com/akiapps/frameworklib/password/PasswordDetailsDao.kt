@@ -8,8 +8,8 @@ import androidx.room.Query
 interface PasswordDetailsDao {
 
     @Query("SELECT * FROM PasswordDetails")
-    suspend fun getPasswordDetails(): List<PasswordDetails>
+    suspend fun getPasswordDetails(): List<PasswordDetailsEntity>
 
     @Insert
-    suspend fun addPasswordDetails(passwordDetails: PasswordDetails)
+    suspend fun addPasswordDetails(passwordDetails: PasswordDetailsEntity): Long
 }

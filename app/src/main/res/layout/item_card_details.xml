@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:layout_margin="@dimen/margin_15_dp"
+    android:layout_margin="@dimen/margin_15_dp"
     app:cardElevation="@dimen/elevation_10">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -24,7 +24,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="Credit Card" />
+            android:text="Credit Card" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/text_card_name"
@@ -39,7 +39,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_card_type"
-            tools:text="Behara venkata Akhil" />
+            android:text="Behara venkata Akhil" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/text_card_number"
@@ -54,7 +54,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_card_name"
-            tools:text="4173  4800  2036  7502" />
+            android:text="4173  4800  2036  7502" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/text_card_expiry"
@@ -69,7 +69,7 @@
             app:layout_constraintEnd_toEndOf="@+id/text_card_number"
             app:layout_constraintStart_toStartOf="@+id/text_card_number"
             app:layout_constraintTop_toBottomOf="@+id/text_card_number"
-            tools:text="expiry: 09/25" />
+            android:text="expiry: 09/25" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/text_card_cvv"
@@ -84,7 +84,7 @@
             app:layout_constraintEnd_toEndOf="@+id/text_card_number"
             app:layout_constraintStart_toStartOf="@+id/text_card_number"
             app:layout_constraintTop_toBottomOf="@+id/text_card_expiry"
-            tools:text="Cvv:- 890" />
+            android:text="Cvv:- 890" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

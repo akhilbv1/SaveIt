@@ -9,11 +9,11 @@ import com.akiapps.frameworklib.card.CardDetails
 import com.akiapps.frameworklib.card.CardDetailsDao
 import com.akiapps.frameworklib.generaldetails.GeneralDetails
 import com.akiapps.frameworklib.generaldetails.GeneralDetailsDao
-import com.akiapps.frameworklib.password.PasswordDetails
+import com.akiapps.frameworklib.password.PasswordDetailsEntity
 import com.akiapps.frameworklib.password.PasswordDetailsDao
 
 
-@Database(entities = [CardDetails::class, PasswordDetails::class, GeneralDetails::class], version = 1)
+@Database(entities = [CardDetails::class, PasswordDetailsEntity::class, GeneralDetails::class], version = 1)
 @TypeConverters(DateConvertor::class)
 abstract class InformationDatabase : RoomDatabase() {
     abstract fun creditCardDetailsDao(): CardDetailsDao

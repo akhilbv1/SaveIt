@@ -8,4 +8,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="background_button_save">#CFF8D1</color>
+    <color name="gray_light">#4DBEBEBE</color>
 </resources>

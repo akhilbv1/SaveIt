@@ -17,6 +17,31 @@
 
     </com.google.android.material.appbar.MaterialToolbar>
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/text_no_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No Details found!!"
+        android:visibility="gone"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+
+    <com.akiapps.saveit.CustomMaterialDropDown
+        android:id="@+id/test_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Testing the drop down"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rec_info_list"
         android:layout_width="0dp"
@@ -26,5 +51,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         tools:listitem="@layout/item_information_details_card"/>
+
+     <com.google.android.material.floatingactionbutton.FloatingActionButton
+         android:id="@+id/fab_add_info"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:src="@drawable/ic_add_info"
+         android:layout_marginEnd="15dp"
+         android:layout_marginBottom="15dp"
+         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

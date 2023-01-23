@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/addCardDetailsFragment">
+    app:startDestination="@id/showInformationFragment">
+
+    <fragment
+        android:id="@+id/showInformationFragment"
+        android:name="com.akiapps.saveit.home.showInfo.ShowInformationListFragmnet"
+        tools:layout="ShowInformationFragment">
+        <action
+            android:id="@+id/action_showInformationFragment_to_addInformationBottomSheet"
+            app:destination="@id/addInformationBottomSheet"/>
+    </fragment>
+
+    <dialog
+        android:id="@+id/addInformationBottomSheet"
+        android:name="com.akiapps.saveit.home.showInfo.AddInformationBottomSheetBehaviour"
+        android:label="addInfo">
+        <action
+            android:id="@+id/action_addInformationBottomSheet_to_addInfomationFragment"
+            app:destination="@id/addInformationFragment"/>
+        <action
+            android:id="@+id/action_addInformationBottomSheet_to_addCardDetailsFragment"
+            app:destination="@id/addCardDetailsFragment"/>
+    </dialog>
 
     <fragment
         android:id="@+id/addInformationFragment"
